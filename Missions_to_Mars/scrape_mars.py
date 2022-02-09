@@ -19,7 +19,7 @@ def scrape_info():
     soup = bs(html, "html.parser")
 
     # Saving only first element to collect the latest data
-    title = soup.find_all('div', class_='content_title')[0].text
+    title_art = soup.find_all('div', class_='content_title')[0].text
     para = soup.find_all('div', class_='article_teaser_body')[0].text
 
     # Define url address, visit JPL Mars Space Images
@@ -40,7 +40,7 @@ def scrape_info():
     # Use Pandas to scrape through the table
     table = pd.read_html(url)
     # Cleaning the table
-    df = table[1]
+    df = table[0]
     df2 = df.set_index(keys=0)
     df2.index.name=None
     df2.columns = [''] * len(df2.columns)
@@ -73,9 +73,10 @@ def scrape_info():
         soup = bs(html, 'html.parser')
         # Scrape hemisphere page for img url and title
         img_url = soup.find_all('img', class_='wide-image')[0]['src']
+        full_url = url + img_url
         title = soup.find_all('h2', class_='title')[0].text
         # Create dictionary and append 
-        dictionaries = {"title": title, "img_url": img_url}
+        dictionaries = {"title": title, "img_url": full_url}
         hemisphere_image_urls.append(dictionaries)
         # Click back to the main page
         back = soup.find_all('h3')[1].text
@@ -83,11 +84,11 @@ def scrape_info():
 
     # Creating dictionary to hold all of the scraped data
     mars_data = {
-        "Article Title": title,
-        "Article paragraph": para,
-        "Featured Image Address": featured_image_url,
-        "Mars Facts HTML table": html_table,
-        "Mars Hemispheres": hemisphere_image_urls
+        "title_art": title_art,
+        "para": para,
+        "featured_image_url": featured_image_url,
+        "html_table": html_table,
+        "hemisphere_image_urls": hemisphere_image_urls
         }
 
     # Close the browser after scraping
