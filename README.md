@@ -1,12 +1,15 @@
 <h1>Mission to Mars</h1>
 <h4>Web Scraping Challenge</h4>
 <br>
-<p><ul>The following repository contains Missions_to_Mars folder with:
-<li>Jupyter Notebook</li>
-<li>scrape_mars.py file</li>
-<li>app.py file</li>
-<li>screenshort folder with image of the final application result</li>
-<li>templates folder with index file containing HTML code, using Bootstrap to style the webpage</li>
+<p>The following repository contains Missions_to_Mars folder with:
+<ul>
+ <i>
+  <li>Jupyter Notebook</li>
+  <li>scrape_mars.py file</li>
+  <li>app.py file</li>
+  <li>screenshort folder with image of the final application result</li>
+  <li>templates folder with index file containing HTML code, using Bootstrap to style the webpage</li>
+ </i>
 </ul>
 </p>
 <br>
