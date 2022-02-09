@@ -3,10 +3,10 @@
 <br>
 <p><ul>The following repository contains Missions_to_Mars folder with:
 <li>Jupyter Notebook</li>
-<li>scrape_mars file</li>
-<li>app file</li>
+<li>scrape_mars.py file</li>
+<li>app.py file</li>
 <li>screenshort folder with image of the final application result</li>
-<li>templates folder with index file containing html code</li>
+<li>templates folder with index file containing HTML code, using Bootstrap to style the webpage</li>
 </ul>
 </p>
 <br>
@@ -24,4 +24,4 @@
 <strong>The Flask App</strong> connects, fetches and inserts data to and from a MongoDB. The script imports the scrape function, queries Mongo database and passes the mars data into an HTML template to display data.</p>
   
   
-<p>The assignment utilises Flask, BeautifulSoup, Splinter, MongoDB.</p>
+<p>The assignment utilises Flask, BeautifulSoup, Splinter, MongoDB, Bootstrap.</p>
