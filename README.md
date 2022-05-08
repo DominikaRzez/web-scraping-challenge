@@ -20,10 +20,12 @@
     <li>Scrapes high resolution images for each of <a href="https://marshemispheres.com/">Mars hemispheres</a> and saves image urls and titles into a dictionary</li>
    </ul>
 </p>
+<img src="https://github.com/DominikaRzez/web-scraping-challenge/blob/main/Missions_to_Mars/screenshot/scrape.png?raw=true">
 <br>
 <p><strong>The file scrape_mars.py</strong> contains a function called scrape that executes all of the scraping code and holds scraped data in one Python dictionary
 <br>
 <strong>The Flask App</strong> connects, fetches and inserts data to and from a MongoDB. The script imports the scrape function, queries Mongo database and passes the mars data into an HTML template to display data.</p>
+<img src="https://github.com/DominikaRzez/web-scraping-challenge/blob/main/Missions_to_Mars/screenshot/final_application.png?raw=true">
   
   
 <p>The assignment utilises Flask, BeautifulSoup, Splinter, MongoDB, Bootstrap.</p>
